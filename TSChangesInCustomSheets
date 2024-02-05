@@ -1,5 +1,5 @@
 /*
- * TIMESTAMP FUNCTION CHANGES IN CUSTOM SHEETS
+ * TIMESTAMP FUNCTION CHANGES IN CUSTOM SHEETS (script)
  * Function that adds a timestamp in a custom cell when any specified sheet is edited
  * 
  * This function only changes timestamp if changes are made in specified Sheets of a SpreadSheet. Names must match exactly as the 

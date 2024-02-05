@@ -1,4 +1,4 @@
-# Google Sheets Scripts (My own)
+# Google Sheets Scripts Examples
 
 This project is a collection of my personal functions made for my personal Google Sheets Spreadsheets.
 
@@ -8,9 +8,10 @@ I know coding is not perfect but I started recently and, as I said, these person
 
 ### Timestamps on a single cell
 
-  * Timestamp Changes in a Spreadsheet
+  * [T]imestamp Changes in a Spreadsheet](TSChangesInSS)
   	> [!NOTE]
 	> Only works to show timestamp when ANY cell is edited in the whole spreadshet
-  * Timestamp changes in custom sheets	
+
+  * [Timestamp changes in custom sheets](TSChangesInCustomSheets)	
   	> [!NOTE]
 	> This one is the same as the previous but only sets a timestamp when changes are made in a specified sheet. This is useful for bigger spreadsheets with multiple tabs, setting the sheet to be tracked and ignoring the rest of the spreadsheet.

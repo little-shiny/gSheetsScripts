@@ -1,5 +1,5 @@
 /**
- * GENERIC TIMESTAMP FUNCTION
+ * GENERIC TIMESTAMP FUNCTION (Script)
  *  
  * Function that adds a timestamp in a custom cell when any part of the spreadsheet is modified.
  * author: little_shiny
