@@ -1,0 +1,28 @@
+/*
+ * TIMESTAMP FUNCTION CHANGES IN CUSTOM SHEETS
+ * Function that adds a timestamp in a custom cell when any specified sheet is edited
+ * 
+ * This function only changes timestamp if changes are made in specified Sheets of a SpreadSheet. Names must match exactly as the 
+ * Google Sheets file's tabs.
+ * 
+ * author: little_shiny
+*/
+
+function onEdit(e) {
+
+    var nameOfSpreadSheet = "nameOfTheSpreadsheet"; // Spreadsheet main file name
+
+    if ( SpreadSheetApp.getActiveSheet().getName() !== nameOfSpreadSheet ){ 
+        // Ends if file changed is not specified Spreadsheet 
+        //(only activates in the current spreadsheet)
+    return;
+    }
+    const timestampCell = 'cell'; //Desired cell for timestamp coordinates. Place between ''. Example: 'A1' will paste the Timestamp in col 1, row 1.
+    var currentSS = SpreadsheetApp.getActiveSpreadsheet(); 
+    var dataSheet = currentSS.getSheetByName(nameOfSpreadSheet); 
+
+    //Custom Date format *info: "https://www.w3schools.com/js/js_date_formats.asp"
+    var formatedDate = Utilities.formatDate(new Date(), "GMT+01:00", "dd/MM/yyyy 'a las' HH:mm:ss"); 
+
+    dataSheet.getRange(timestampCell).setValue(formatedDate);
+}

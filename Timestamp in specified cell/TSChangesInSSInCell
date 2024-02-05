@@ -1,0 +1,28 @@
+/**
+ * GENERIC TIMESTAMP FUNCTION
+ *  
+ * Function that adds a timestamp in a custom cell when any part of the spreadsheet is modified.
+ * author: little_shiny
+ */
+
+ function onEdit(e) {
+
+    // Prevent errors if no object is passed.
+    if (!e) return;
+    
+    // Variable for formatated date as desired 
+    // * more info: "https://www.w3schools.com/js/js_date_formats.asp"
+    
+      var formatedDate = Utilities.formatDate(new Date(), "GMT+01:00", "dd/MM/yyyy 'a las' HH:mm");  
+    
+    // gets active sheet
+    e.source.getActiveSheet()
+    // Sets the desired cell for the Timestamp to be showed (remove the "<>" and place cell coordinates) 
+    // *Ex. ('A1') places the Timestamp on A1 cell 
+
+        .getRange('<desiredCell>')
+    
+    // Update the date.
+        .setValue(formatedDate);
+        
+}//end of function
